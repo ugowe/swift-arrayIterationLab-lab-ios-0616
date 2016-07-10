@@ -15,8 +15,7 @@
  */
 // write your code here
 
-
-
+let cartIngredients : [String] = ["Chips", "Salsa", "Guacamole", "Red wine"]
 
 
 
@@ -25,11 +24,7 @@
  */
 // write your code here
 
-
-
-
-
-
+var listOfNumbers : [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 /*: question3
  ### 3. Take the list of numbers you created in question 2 and print their values in the most efficient way possible.
@@ -37,20 +32,18 @@
 // write your code here
 
 
-
-
-
-
+for number in listOfNumbers{
+    print(number)
+}
 
 /*: question4
  ### 4. Take the list of shopping cart items you created in question 1 and print their values in the most efficient way possible. Prefix each item in the array with a string of text.
  */
 // write your code here
 
-
-
-
-
+for ingredient in cartIngredients {
+    print("\(ingredient)")
+}
 
 
 /*: question5
@@ -59,9 +52,9 @@
 // write your code here
 
 
-
-
-
+for ingredient in cartIngredients {
+    print("\(ingredient)")
+}
 
 
 /*: question6
@@ -69,21 +62,38 @@
  */
 // write your code here
 
+var names : [String] = []
 
+func sayGoodMorning(names: [String]) {
+    for name in names {
+    print("Good morning \(name)")
+        
+        if name == "Michael" {
+        print("Top of the morning, Michael")
+        }
+    }
+}
 
-
-
+sayGoodMorning(cartIngredients)
 
 /*: question7
  ### 7. Create a function that takes an array of Ints (40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49) and returns an array of Ints. This function should look through the array of Ints and create a new array of Ints that only contain integers less than 50.
  */
 // write your code here
 
+let listOfInts = [40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49]
+var listOfIntsUnder50 : [Int] = []
+
+func returnUnder50(list: [Int]) -> [Int] {
+    for number in list {
+        if number < 50 {
+            listOfIntsUnder50.append(number)
+        }
+    }
+    return listOfIntsUnder50
+}
 
 
-
-
-
-
+returnUnder50(listOfInts)
 
 //: Check here on the solution branch for a link to the solution file
